@@ -46,11 +46,11 @@ h1, p{
   	box-shadow: 0 9px #999;
 }
 
-#curr_question {
+#curr_question, #timer, #score, #reset {
 	display: none;
 }
 
-.answer {
+.answer, #reset {
 	background-color: #1c0666;
     border: none;
     color: white;
@@ -64,9 +64,9 @@ h1, p{
   	display: none;
 }
 
-#five:hover, #ten:hover, #fifteen:hover, .answer:hover{background-color: #9c0bbc}
+#five:hover, #ten:hover, #fifteen:hover, .answer:hover, #reset:hover{background-color: #9c0bbc}
 
-#five:active, #ten:active, #fifteen:active, .answer:active {
+#five:active, #ten:active, #fifteen:active, .answer:active, #reset:active {
   background-color: #070006;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
