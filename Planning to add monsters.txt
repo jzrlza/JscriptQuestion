@@ -1,5 +1,0 @@
-Just put on monster images for each specific questions.
-The monster explodes once the correct answer answered
-
-Player has HP, according to how many questions
-wrong answer looses HP

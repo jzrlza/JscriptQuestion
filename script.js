@@ -3,6 +3,11 @@ var answered = false;
 var score = 0;
 var current = 0;
 var index = 0;
+var correct = 0;
+var incorrect = 0;
+var time = 0;
+var bonus = 0;
+var avg_time = [];
 
 $.getJSON('qa.json', function(data) {
         
@@ -44,6 +49,10 @@ function runQuestions(n){
 	current = indices[0];
 	newQuestion(current);
 
+	for(var i = 0; i <= n; i++){
+		avg_time[i] = 0;
+	}
+
 	//get questions and answers
 	startTimer(60*2, document.querySelector('#timer'), n, indices);
 
@@ -77,7 +86,7 @@ function newQuestion(i){
 
 	answers = document.getElementsByClassName("answer");
 
-	question.innerHTML = (index+1)+") "+json.questions[i].question;
+	question.innerHTML = "<img src='"+json.questions[i].image+"' alt='Monster!!'> <br><br>"+(index+1)+") "+json.questions[i].question;
 
 	answers[0].innerHTML = json.questions[i].choices[0].name;
 	answers[1].innerHTML = json.questions[i].choices[1].name;
@@ -89,6 +98,7 @@ function startTimer(duration, display, n, indices) {
     var timer = duration, minutes, seconds;
     index = 1;
     var interval = setInterval(function () {
+    	bonus = 0;
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -97,7 +107,12 @@ function startTimer(duration, display, n, indices) {
 
         display.textContent = "Time remaining : "+minutes + ":" + seconds;
 	
-	
+        bonus = parseInt(minutes*6+seconds);
+
+		time++;
+		avg_time[index]++;
+		
+		
 
         if (--timer < 0 || answered) {
 		timer = duration;
@@ -107,7 +122,7 @@ function startTimer(duration, display, n, indices) {
 			displayScores();
 			clearInterval(interval);
 		}else {
-  
+  		
 	    current = indices[index];
 	    newQuestion(current);
 	    index++;
@@ -158,12 +173,19 @@ function displayScores(){
 	scoreText.style.display = "block";
 	document.getElementById("reset").style.display = "inline";
 
-	scoreText.innerHTML = "Score : "+score;
+	scoreText.innerHTML = "Score : "+score+"<br><br> Correct : "+correct+"<br><br> Incorrect : "+incorrect+"<br><br> Total Time : "+time+" s";
+
+	for(var i = 1; i < avg_time.length; i++){
+		scoreText.innerHTML += "<br><br> Question No."+i+" Time Spent : "+avg_time[i]+" s";
+	}
 
 	score = 0;
 	index = 0;
 	answered = false;
-
+	correct = 0;
+	incorrect = 0;
+	time = 0;
+	bonus = 0;
 	
 
 }
@@ -181,28 +203,40 @@ function reset(){
 
 function ans1(){
 	if (json.questions[current].correct_ans == 1 && !answered){		
-		score++;
+		correct++;
+		score += parseInt(1+bonus);
+	} else if (json.questions[current].correct_ans != 1 && !answered){
+		incorrect++;
 	}
 	answered = true;
 }
 
 function ans2(){
 	if (json.questions[current].correct_ans == 2 && !answered){		
-		score++;
+		correct++;
+		score += parseInt(1+bonus);
+	} else if (json.questions[current].correct_ans != 2 && !answered){
+		incorrect++;
 	}
 	answered = true;
 }
 
 function ans3(){
 	if (json.questions[current].correct_ans == 3 && !answered){		
-		score++;
+		correct++;
+		score += parseInt(1+bonus);
+	} else if (json.questions[current].correct_ans != 3 && !answered){
+		incorrect++;
 	}
 	answered = true;
 }
 
 function ans4(){
 	if (json.questions[current].correct_ans == 4 && !answered){		
-		score++;
+		correct++;
+		score += parseInt(1+bonus);
+	} else if (json.questions[current].correct_ans != 4 && !answered){
+		incorrect++;
 	}
 	answered = true;
 }

@@ -22,7 +22,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 3
+      "correct_ans": 3,
+      "image" : "monsters/lamia.jpg"
     },
     {
       "name": "question-2",
@@ -45,7 +46,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 1
+      "correct_ans": 1,
+      "image" : "monsters/plantress.jpg"
     },
     {
       "name": "question-3",
@@ -68,7 +70,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 2
+      "correct_ans": 2,
+      "image" : "monsters/lamia.jpg"
     },
     {
       "name": "question-4",
@@ -91,7 +94,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 2
+      "correct_ans": 2,
+      "image" : "monsters/maidress.jpg"
     },
     {
       "name": "question-5",
@@ -114,7 +118,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 4
+      "correct_ans": 4,
+      "image" : "monsters/valky.jpg"
     },
     {
       "name": "question-6",
@@ -137,7 +142,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 1
+      "correct_ans": 1,
+      "image" : "monsters/troll.jpg"
     },
     {
       "name": "question-7",
@@ -160,7 +166,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 4
+      "correct_ans": 4,
+      "image" : "monsters/vamp.jpg"
     },
     {
       "name": "question-8",
@@ -183,7 +190,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 3
+      "correct_ans": 3,
+      "image" : "monsters/manticore.jpg"
     },
     {
       "name": "question-9",
@@ -206,7 +214,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 3
+      "correct_ans": 3,
+      "image" : "monsters/darkress.jpg"
     },
     {
       "name": "question-10",
@@ -229,7 +238,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 1
+      "correct_ans": 1,
+      "image" : "monsters/nightmare.jpg"
     },
     {
       "name": "question-11",
@@ -252,7 +262,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 2
+      "correct_ans": 2,
+      "image" : "monsters/mershark.jpg"
     },
     {
       "name": "question-12",
@@ -275,7 +286,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 1
+      "correct_ans": 1,
+      "image" : "monsters/beast.jpg"
     },
     {
       "name": "question-13",
@@ -298,7 +310,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 4
+      "correct_ans": 4,
+      "image" : "monsters/cyclops.jpg"
     },
     {
       "name": "question-14",
@@ -321,7 +334,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 4
+      "correct_ans": 4,
+      "image" : "monsters/anubis.jpg"
     },
     {
       "name": "question-15",
@@ -344,7 +358,8 @@
           "value": 4
         }
       ],
-      "correct_ans": 2
+      "correct_ans": 2,
+      "image" : "monsters/antboy.jpg"
     }
   ]
 }
